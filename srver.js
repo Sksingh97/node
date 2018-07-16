@@ -31,6 +31,12 @@ hbs.registerHelper('screamIt',(text)=>{
   return text.toUpperCase();
 })
 app.set('view engine','hbs');
+app.get('/project',(req,res)=>{
+  res.render('project.hbs',{
+    pageTitle:'Portfolio Page',
+    msg:'These are your current Projects' 
+  })
+})
 app.get('/',(req, res)=>{
   // res.send('<h1>hello Express!</h1>');
   res.render('home.hbs',{
